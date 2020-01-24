@@ -205,37 +205,44 @@ img {
 header {
   display: flex;
   justify-content: center;
-  border-bottom: 2px dashed #c0c0c0;
 }
 header nav {
   width: 70%;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  margin: 1% 0;
   align-items: center;
 }
+@media (max-width: 500px) {
+  header nav {
+    width: 100%;
+    display: block;
+  }
+}
 header div {
-  display: block;
-  widows: 100%;
-}
-header a {
-  padding: 1% 2%;
-  margin: 0 2%;
-}
-header h6 {
-  border: 2px red solid;
+  width: 60%;
+  text-align: left;
 }
 @media (max-width: 500px) {
-  header h6 {
-    display: block;
-    text-align: center;
+  header div {
     width: 100%;
+    text-align: center;
+  }
+}
+header a {
+  margin: 0 2%;
+}
+@media (max-width: 500px) {
+  header a {
+    margin: 0 7%;
   }
 }
 @media (max-width: 500px) {
   header {
     width: 90%;
     flex-wrap: wrap;
+    margin: 0 5%;
   }
 }
 .banner {
@@ -267,11 +274,13 @@ header h6 {
   flex-direction: column;
   width: 70%;
   margin: 0 15%;
+  border-bottom: 2px dashed #c0c0c0;
+  border-top: 2px dashed #c0c0c0;
 }
 @media (max-width: 500px) {
   .welcome {
     width: 90%;
-    margin-left: 0 2.5%;
+    margin: 5%;
   }
 }
 .welcome h1 {
@@ -327,6 +336,12 @@ header h6 {
 .home .inverse-content {
   padding-bottom: 30px;
   border-bottom: 2px dashed #c0c0c0;
+}
+@media (max-width: 500px) {
+  .home .inverse-content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 .home .inverse-content .text-content {
   padding-left: 1%;
